@@ -1,0 +1,111 @@
+.t1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 0cap;
+    border-color: white;
+
+}
+
+body {
+    background-color: black;
+    background-image: url("../img/Techv3.png");
+    width: 100%;
+}
+
+p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.reserva {
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+form {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+
+}
+
+.digito-verificador {
+    width: 30px;
+
+}
+
+.confirmar {
+    background-color: black;
+    color: white;
+    border-color: white;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 8px;
+    border-width: 1px;
+    font-size: 30px;
+}
+
+.confirmar:hover {
+    background-color: gray;
+}
+
+.limpiar {
+    background-color: black;
+    color: white;
+    border-color: white;
+    height: 40px;
+    width: 110px;
+    cursor: pointer;
+    margin-right: 8px;
+    border-width: 1px;
+    font-size: 30px;
+}
+
+.limpiar:hover {
+    background-color: gray;
+}
+
+.rut-sin-digito-verificador {
+    width: 70px;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    width: 100%;
+}
+
+table {
+    color: white;
+    font-size: 35px;
+    border-color: white;
+    border-width: 1px;
+    margin-right: 9px;
+    width: 100%;
+
+}
+
+thead {
+    height: 100px;
+    width: 100px;
+}
+
+input {
+    height: 30px;
+}
+
+a {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
