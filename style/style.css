@@ -1,111 +1,333 @@
-.t1 {
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    border-bottom: 0cap;
-    border-color: white;
+/* ==========================================
+   Tech Soluciones — Estilo simple y limpio
+   ========================================== */
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    background-image: url("../img/Techv3.png");
-    width: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
 }
 
-p {
-    color: white;
-    font-size: 30px;
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e293b, #334155);
     text-align: center;
-    width: 100%;
+    padding: 2.5rem 1.5rem;
+}
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+/* Main */
+main {
+    flex: 1;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Hero */
+.hero-text {
+    font-size: 1.1rem;
+    color: #475569;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Asesoría */
+.asesoria {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .reserva {
-    text-align: left;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: left;
-
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
 }
 
-form {
-    color: white;
-    font-size: 30px;
-    text-align: left;
-
+.form-asesoria {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.digito-verificador {
-    width: 30px;
-
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 }
 
-.confirmar {
-    background-color: black;
-    color: white;
-    border-color: white;
-    height: 40px;
-    width: 150px;
-    cursor: pointer;
-    margin-right: 8px;
-    border-width: 1px;
-    font-size: 30px;
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
 }
 
-.confirmar:hover {
-    background-color: gray;
+.form-group input {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.limpiar {
-    background-color: black;
-    color: white;
-    border-color: white;
-    height: 40px;
-    width: 110px;
-    cursor: pointer;
-    margin-right: 8px;
-    border-width: 1px;
-    font-size: 30px;
+.form-group input::placeholder {
+    color: #94a3b8;
 }
 
-.limpiar:hover {
-    background-color: gray;
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+}
+
+/* RUT */
+.rut-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .rut-sin-digito-verificador {
-    width: 70px;
+    flex: 1;
+    max-width: 180px;
 }
 
-h2 {
-    color: white;
-    font-size: 40px;
-    font-weight: bolder;
-    width: 100%;
+.rut-separador {
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.digito-verificador {
+    width: 44px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Botones */
+.form-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    min-width: 130px;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-confirmar {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.btn-confirmar:hover {
+    background: #2563eb;
+}
+
+.btn-limpiar {
+    background: transparent;
+    color: #64748b;
+    border: 1px solid #d1d5db;
+}
+
+.btn-limpiar:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Servicios */
+.servicios h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+}
+
+/* Tabla */
+.Tabla-Planes {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 table {
-    color: white;
-    font-size: 35px;
-    border-color: white;
-    border-width: 1px;
-    margin-right: 9px;
     width: 100%;
-
+    border-collapse: collapse;
+    font-size: 0.95rem;
 }
 
-thead {
-    height: 100px;
-    width: 100px;
+thead tr {
+    background: #f1f5f9;
+    border-bottom: 2px solid #e2e8f0;
 }
 
-input {
-    height: 30px;
-}
-
-a {
-    color: white;
-    font-size: 30px;
+thead th {
+    padding: 0.9rem 1rem;
+    font-weight: 700;
     text-align: center;
-    width: 100%;
+    color: #475569;
+}
+
+thead th:first-child {
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.15s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+tbody tr:nth-child(even):hover {
+    background: #f1f5f9;
+}
+
+tbody th,
+tbody td {
+    padding: 0.9rem 1rem;
+    text-align: center;
+}
+
+tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+.check {
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cross {
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-link {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #3b82f6;
+}
+
+/* Responsive chico */
+@media (max-width: 600px) {
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .t1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .asesoria {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        min-width: unset;
+    }
+
+    thead th,
+    tbody th,
+    tbody td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+    }
 }

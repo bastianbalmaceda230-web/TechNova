@@ -3,82 +3,110 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Tech Soluciones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Soluciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="t1">Tech Soluciones</h1>
+
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="t1">Tech Soluciones</h1>
+        </div>
     </header>
-    <br>
-    <p>Somos una empresa dedicada a ofrecer soluciones tecnologicas a nuestros usuarios
-        con mas de 50 años de experiencia ofreciendo soluciones tecnologicas a nuestros clientes
-        comprometidos a ofrecer un servicio a la altura de vuestras expectativas.</p>
-    <p class="reserva">¿Desea solicitar una Asesoria?</p>
-    <form>
-        <label>Nombre Completo:</label>
-        <input type="text">
-        <br>
-        <label>Rut:</label>
-        <input class="rut-sin-digito-verificador" type="text" name="rut-sin-digito-verificador">
-        <label>-</label>
-        <input class="digito-verificador" type="text" name="digito-verificador">
-        <br>
-        <label>Correo electrónico:</label>
-        <input type="text" name="correo">
-        <br>
-        <label>Numero De Telefono:</label>
-        <input type="text" name="Telefono">
-        <br> <br>
-        <button class="confirmar">Confirmar</button>
-        <label><button class="limpiar">Limpiar</button></label>
-    </form>
-    <h2>Servicios Tech Soluciones</h2>
-    <div class="Tabla-Planes">
-        <table border="1">
-            <tr>
-                <thead>
-                    <th>Tabla de Planes</th>
-                    <th colspan="3">Nivel</th>
-                </thead>
-                <tbody>
-            </tr>
-            <tr>
-                <th></th>
-                <th>Basico</th>
-                <th>Medio </th>
-                <th>Avanzado</th>
-            </tr>
-            <tr>
-                <td>Mantenimiento Preventivo</td>
-                <td>&#10003</td>
-                <td>&#10003</td>
-                <td>&#10003</td>
-            </tr>
-            <tr>
-                <td>Copias de Seguridad</td>
-                <td>&#10005</td>
-                <td>&#10003</td>
-                <td>&#10003</td>
-            </tr>
-            <tr>
-                <td>Soporte Tecnico VIP</td>
-                <td>&#10005</td>
-                <td>&#10005</td>
-                <td>&#10003</td>
-            </tr>
-    </div>
-    </tbody>
-    </table>
+
+    <main>
+        <section class="hero">
+            <p class="hero-text">Somos una empresa dedicada a ofrecer soluciones tecnológicas a nuestros usuarios
+                con más de 50 años de experiencia ofreciendo soluciones tecnológicas a nuestros clientes,
+                comprometidos a ofrecer un servicio a la altura de vuestras expectativas.</p>
+        </section>
+
+        <section class="asesoria">
+            <p class="reserva">¿Desea solicitar una Asesoría?</p>
+            <form class="form-asesoria">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div class="form-group form-group-rut">
+                    <label>Rut:</label>
+                    <div class="rut-wrapper">
+                        <input class="rut-sin-digito-verificador" type="text" name="rut-sin-digito-verificador" placeholder="12345678" maxlength="8">
+                        <span class="rut-separador">-</span>
+                        <input class="digito-verificador" type="text" name="digito-verificador" placeholder="k" maxlength="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" name="Telefono" placeholder="+56 9 1234 5678">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-confirmar">Confirmar</button>
+                    <button class="btn btn-limpiar">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="servicios">
+            <h2>Servicios Tech Soluciones</h2>
+
+            <div class="Tabla-Planes">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tabla de Planes</th>
+                            <th colspan="3">Nivel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <th>Básico</th>
+                            <th>Medio</th>
+                            <th>Avanzado</th>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento Preventivo</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Copias de Seguridad</td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Soporte Técnico VIP</td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="footer-link">Sobre Nosotros</a>
+    </footer>
+
 </body>
-<br>
-<br>
-<br>
-<br>
-<footer>
-    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Sobre Nosotros</a>
-</footer>
 
 </html>
